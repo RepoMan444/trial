@@ -14,9 +14,9 @@ async function getData() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-		cc_number: 'ALIAS',
-		cc_exp: 'ALIAS',
-		cc_cvv: 'ALIAS',
+		cc_number: 'ALIAS',  /* replace with tokenized value after successful inbound request */
+		cc_exp: 'ALIAS',  /* replace with tokenized value after successful inbound request */
+		cc_cvv: 'ALIAS',  /* replace with tokenized value after successful inbound request */
       }),
       agent,
     });
