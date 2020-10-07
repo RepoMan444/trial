@@ -6,7 +6,7 @@ I have written 2 test apps in NodeJS:
 
 ## Installation
 
-Run each app using the commands below:
+Install NodeJS & required modules, then run each app from the install directory using the commands below:
 
 1. redact-inbound-route.js
 ```bash
