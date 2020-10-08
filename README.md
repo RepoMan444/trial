@@ -6,7 +6,7 @@ I have written 2 test apps in NodeJS:
 
 ## Installation
 
-Install NodeJS & required modules, then run each app from the install directory using the commands below:
+Install NodeJS & required modules, add .JS files into install directory, then run each app from install directory:
 
 1. redact-inbound-route.js
 ```bash
@@ -17,6 +17,8 @@ node redact-inbound-route.js
 node reveal-outbound-route.js
 ```
 
-## Expected Result
+## Result
 
-Dashboard log entries should show received data & replaced/tokenized values. Due to my 429 errors / too many requests, I cannot complete this task until later. When resolved, I would then check logs, pick a successful entry, click the Body tab, then click Secure Payload. Then I would select each JSON string / data element I want to be segmented/tokenized.
+1. After running redact-inbound-route.js , the returned data shows the tokenized alias'ed values. I manually set up the filter operations because I could not get a log entry that showed the Body tab & Secure This Payload button. This would be another way I could select data for segmentation/alias'ing - click Secure This Payload and click on each JSON string / data element to be tokenized.
+
+2. After running reveal-outbound-route.js and setting the tokenized values in JSON.stringify , the returned data should show the original values.
