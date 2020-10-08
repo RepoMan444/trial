@@ -2,7 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const fetch = require('node-fetch');
 const HttpsProxyAgent = require('https-proxy-agent');
-const urlParams = url.parse('http://$HTTPS_PROXY_USERNAME$:$HTTPS_PROXY_PASSWORD$@tntiidqmm10.sandbox.verygoodproxy.com:8080');
+const urlParams = url.parse('http://UStzjZowbV1dDgeWXxzYgxnX:f23b6ba7-731f-4e1a-a4cc-f7316b81bc46@tntiidqmm10.sandbox.verygoodproxy.com:8080');
 const agent = new HttpsProxyAgent({
   ...urlParams,
   ca: [fs.readFileSync('sandbox.pem')],
@@ -10,7 +10,7 @@ const agent = new HttpsProxyAgent({
 async function getData() {
   let result;
   try {
-    result = await fetch('https://tntiidqmm10.sandbox.verygoodproxy.com/post', {
+    result = await fetch('https://echo.apps.verygood.systems/post', {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
