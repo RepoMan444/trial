@@ -2,7 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const fetch = require('node-fetch');
 const HttpsProxyAgent = require('https-proxy-agent');
-const urlParams = url.parse('http://%HTTPS_PROXY_USERNAME%:%HTTPS_PROXY_PASSWORD%@tntiidqmm10.sandbox.verygoodproxy.com:8080');
+const urlParams = url.parse('http://$HTTPS_PROXY_USERNAME$:$HTTPS_PROXY_PASSWORD$@tntiidqmm10.sandbox.verygoodproxy.com:8080');
 const agent = new HttpsProxyAgent({
   ...urlParams,
   ca: [fs.readFileSync('sandbox.pem')],
