@@ -9,7 +9,7 @@ async function getData() {
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
         cc_number: '4111311121111111',
-		cc_exp: '06/22',
+		cc_exp: '06/2022',
 		cc_cvv: '322',
       }),
     });
@@ -21,4 +21,3 @@ async function getData() {
 }
 
 getData().then(response => console.log(response));
-
