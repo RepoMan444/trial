@@ -2,7 +2,7 @@ const fs = require('fs');
 const url = require('url');
 const fetch = require('node-fetch');
 const HttpsProxyAgent = require('https-proxy-agent');
-const urlParams = url.parse('http://UStzjZowbV1dDgeWXxzYgxnX:f23b6ba7-731f-4e1a-a4cc-f7316b81bc46@tntiidqmm10.sandbox.verygoodproxy.com');
+const urlParams = url.parse('http://$HTTPS_PROXY_USERNAME:$HTTPS_PROXY_PASSWORD@tntiidqmm10.sandbox.verygoodproxy.com');
 const agent = new HttpsProxyAgent({
   ...urlParams,
   ca: [fs.readFileSync('sandbox.pem')],
@@ -14,9 +14,9 @@ async function getData() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-		cc_number: 'tok_sandbox_gsrBVpBcSjwLLvuvFnwq4w',
-		cc_exp: 'tok_sandbox_oYcXvgqvDUr2qnXUTbUvta',
-		cc_cvv: 'tok_sandbox_pgmkghTY7PWWozKXNfokJ9',
+		cc_number: 'tok_sandbox_4mna9xatzHo63X69w6Kwox',
+		cc_exp: 'tok_sandbox_9vPgMC8TGEhL4GbEmtaYLj',
+		cc_cvv: 'tok_sandbox_oNPhEq7J2jpVPEh6DUkYod',
       }),
       agent,
     });
