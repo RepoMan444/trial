@@ -8,9 +8,9 @@ async function getData() {
       method: 'POST',
       headers: { 'Content-Type': 'application/json' },
       body: JSON.stringify({
-        cc_number: '4111311121111111',
-		cc_exp: '06/2022',
-		cc_cvv: '322',
+        cc_number: '5111311121111111',
+		cc_exp: '07/2024',
+		cc_cvv: '989',
       }),
     });
   } catch (e) {
